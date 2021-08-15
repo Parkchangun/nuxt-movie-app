@@ -68,7 +68,7 @@ export default {
         crossorigin: true
       },
       {
-        rle: 'stylesheet',
+        rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto:wght@400;700&display=swap'
       }
     ]

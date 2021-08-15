@@ -2,16 +2,19 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    node: true
+    node: true,
+    'cypress/globals': true
   },
   parserOptions: {
     parser: '@babel/eslint-parser',
     requireConfigFile: false
   },
   extends: [
-    'plugin:vue/strongly-recommended', 'eslint:recommended'
+    'plugin:vue/strongly-recommended',
+    'eslint:recommended'
   ],
   plugins: [
+    'cypress'
   ],
   rules: {
     'vue/html-closing-bracket-newline': ['error', {

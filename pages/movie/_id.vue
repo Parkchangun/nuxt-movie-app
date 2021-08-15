@@ -15,22 +15,18 @@
       <Loader
         :size="3"
         :z-index="9"
-        fixed
-      />
+        fixed />
     </template>
     <div
       v-else
-      class="movie-details"
-    >
+      class="movie-details">
       <!-- 이미지 스프라이트를 통해 $loadImage와 같은 이미지 사용 -->
       <div
         :style="{backgroundImage: `url(${requestDiffSizeImage(theMovie.Poster)})`}"
-        class="poster"
-      >
+        class="poster">
         <Loader
           v-if="imageLoading"
-          absolute
-        />
+          absolute />
       </div>
       <div class="specs">
         <div class="title">
@@ -45,12 +41,10 @@
             <div
               v-for="{Source: name, Value: score} in theMovie.Ratings"
               :key="name"
-              class="rating"
-            >
+              class="rating">
               <img
                 :alt="name"
-                :src="`https://raw.githubusercontent.com/ParkYoungWoong/vue3-movie-app/master/src/assets/${name}.png`"
-              />
+                :src="`https://raw.githubusercontent.com/ParkYoungWoong/vue3-movie-app/master/src/assets/${name}.png`" />
               {{ score }}
             </div>
           </div>
@@ -77,7 +71,7 @@
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex'
+import { mapState } from 'vuex'
 import Loader from '@/components/Loader'
 
 export default {

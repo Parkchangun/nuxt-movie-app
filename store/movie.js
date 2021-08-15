@@ -119,6 +119,6 @@ async function _fetchMovie (payload) {
   // SSR: '/api/movie' => '/api/movie'
   const url = process.client
     ? '/api/movie'
-    : `${process.env.CLIENT_URL}/api.movie`
+    : `${process.env.CLIENT_URL}/api/movie`
   return await axios.post(url, payload)
 }
